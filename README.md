@@ -1,26 +1,44 @@
-# base-de-datos
-Notas y laboratorios de la materia Base de Datos
+# 🗃️ Bases de datos 🗃️
 
+## 📆️ Generalidades
 
-## Programa
+### **Parciales** 
+| 💻️ Teórico/práctico: | 💻️ Laboratorio: |
+| --- | --- |
+| 29/09 | 14/10 | 
+| 17/11 | 11/11 | 
+| 24/11 recuperatorio | 25/11 recuperatorio | 
+
+### Regularización y promoción
+
+Se puede promocionar por separado  
+**Teorico/práctico**  
+* Regularizar: al menos 4 en ambos parciales
+* Promocionar: notas de al menos 6 y promedio de 7 (no lineal)
+
+**Laboratorio**
+* Regularizar:
+* Promocionar:
+
+## 📚️ Programa
 
 ### **Introducción**
-+ ⬜️ ¿Qué es una base de datos?
-+ ⬜️ Aplicaciones de bases de datos
-+ ⬜️ Esquemas y ejemplares
-+ ⬜️ Modelos de los datos
-+ ⬜️ Modelo relacional
-+ ⬜️ Modelos de datos no relacionales
-+ ⬜️ Lenguajes consulta
-+ ⬜️ SQL
-+ ⬜️ Álgebra relacional
-+ ⬜️ Diseño de base de datos relacionales
-+ ⬜️ Diseño de entidad-relación
-+ ⬜️ Teoría de normalización
++ ✅️ ¿Qué es una base de datos?
++ ✅️ Aplicaciones de bases de datos
++ ✅️ Esquemas y ejemplares
++ ✅️ Modelos de los datos
++ ✅️ Modelo relacional
++ ✅️ Modelos de datos no relacionales
++ ✅️ Lenguajes consulta
++ ✅️ SQL
++ ✅️ Álgebra relacional
++ ✅️ Diseño de base de datos relacionales
++ ✅️ Diseño de entidad-relación
++ ✅️ Teoría de normalización
 + ⬜️ Traducción de diseño de endidad-relación a tablaas
-+ ⬜️ Sistemas gestores de bases de datos
++ ✅️ Sistemas gestores de bases de datos
 + ⬜️ Arquitectura
-+ ⬜️ Gestión del almacenamiento
++ ✅️ Gestión del almacenamiento
 + ⬜️ Procesamiento de consultas
 + ⬜️ Transacciónes
 + ⬜️ Planificaciones
@@ -149,3 +167,5 @@ Notas y laboratorios de la materia Base de Datos
 + ⬜️ Descomposición
 + ⬜️ Propiedades deseables de una descomposición: descomposición de reunión sin
      pérdida y preservación de las dependencias
+
+** Se pueden encontrar más recursos en la página del libro Silberchertz.
