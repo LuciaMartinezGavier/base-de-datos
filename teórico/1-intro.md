@@ -1,20 +1,24 @@
-
 # **Introducción**
 
 ## ¿Qué es una base de datos?
 Una base de datos es una colección de **datos relacionados** que tiene las
 siguientes propiedades implícitas:
-* Representa algún asécto del mundo real (en ocasiones se denomina *minimundo* o
+* Representa algún aspecto del mundo real (en ocasiones se denomina *minimundo* o
 *universo de discurso*)
 * Es lógicamente coherente con algún tipo de significado inherente. (No es un
 surtido aleatorio de datos).
-* Una base de datos se diseña, construye y rellena para un proósito específico.
+* Una base de datos se diseña, construye y rellena para un propósito específico.
 
-Se usan ampliamente. Permiten navegar, consultar y alteral las informaciones.
+Se usan ampliamente. Permiten navegar, consultar y alterar las informaciones.
+
+### Niveles de abstracción
+Nivel **fisico**: describe cómo se almacena un registro
+Nivel **lógico**: describe los datos almacenados y sus relaciones
+Nivel **vista**: lo que ven los programad de aplicacion
 
 ## Aplicaciones de bases de datos
 Se utilizan para guardar información de diversos tipos en áreas como:
-Banca, Líneas Aéreas, Universidades. Tensacciones de Tarjetas de Crédito,
+Banca, Líneas Aéreas, Universidades. Transacciones de Tarjetas de Crédito,
 Telecomunicaciones, Finanzas, Ventas, Producción, Recursos Humanos...
 
 ## Esquemas e instancias
@@ -22,7 +26,7 @@ Telecomunicaciones, Finanzas, Ventas, Producción, Recursos Humanos...
 **Instancias** Contenido efectivo de la BD en un momento del tiempo.
 
 ## Modelos de los datos
-Es una colección de herramientas conceptiales para describir los datos, las
+Es una colección de herramientas conceptuales para describir los datos, las
 relacioes, la semántica y las restricciones de consistencia.
 
 * Modelo entidad-relación
@@ -42,7 +46,6 @@ contiene registros de un tipo particular. Cada tipo de registro define un númer
 fijo de campos, o atributos. Las columnas de la tabla corresponden a los
 atributos del tipo de registro.
 
-
 ## Modelos de datos no relacionales
 Una base de datos no relacional es aquella que no usa el esquema tabular de
 filas y columnas que se encuentra en la mayoría de los sistemas de base de datos
@@ -58,7 +61,7 @@ que consta de bordes y vértices.
 Lenguajes de consulta: SQL, XQuery, SPARQL.
 
 - **Puros**: álgebra relacional o de tuplas. Se concentran en menos aspectos. Se
-puede verificar que las consultas hacen lo que se espera.
+puede **verificar** que las consultas hacen lo que se espera.
 
 El **sistema gestor** de BD procesa consultas. Gestor de almacenamiento,
 procesamiento de consultas y gestor de transacciones.
@@ -105,23 +108,50 @@ pequeñas, que además de ser más simples y más estables, son más fáciles de
 mantener.
 
 ## Traducción de diseño de endidad-relación a tablas
+<!-- TO DO -->
 
-## Sistemas gestores de bases de datos
+## Sistemas gestores de bases de datos DBMS 
+DBMS: data base managment sytstem
+
 El **sistema gestor** de BD es/se encarga del:
 * Gestor de almacenamiento
 * Procesamiento de consultas
 * Gestor de transacciones
 
-## Arquitectura
 
+## Arquitectura
+<!-- TO DO -->
+	
 ## Gestión del almacenamiento
-Interfaz para programas de aplicación y consultas: acceso al almacenamiento, organización en archivos de los datos, indexado
+El *gestor de almacenamiento* es un módulo de programa que proporciona la interfaz entre los datos de bajo nivel en la vase de datos y los programas de aplicación y consultas emitidas al sistema.
+* Responsable de la interacción con el gestor de archivos.
+Interfaz para programas de aplicación y consultas: acceso al almacenamiento, organización en archivos de los datos, indexado. API
 
 - acceso, modificación y retorno
 - eficiente mediante índices
 
 ## Procesamiento de consultas
+1. Parsear la consulta: se traduce a álgebra relacional.
+2. Optimizar: encontrar la manera más eficiente.
+3. Evaluar: obtener el resultado
+
 ## Transacciónes
+Concepto muy usado en data mining
+Operaciones que se corresponden con una función lógica simple. Ejemplo: subir una nota a guaraní.
+
+Algunas transacciones pueden producir fallas. Por ejemplo se saca plata de una cuenta pero no se pone en otra porque se corta la luz.
+La solución es la **atomicidad**. Todas las operaciones de la transaccion son reflejadas en la BD o ninguna lo es. Se garantiza que el sistema es **consistente**.
+
 ## Planificaciones
+Secuencias que indican el **orden** cronológico en el cual las instrucciones de transacciones concurrentes son ejecutadas.
+Se utilizan locks para bloquear áreas de la BD durante las escrituras.
+
 ## Gestión de transacciones
+Las transacciones deben cumplir 4 propiedades ACID
+1. Atomicity: una operacion no puede quedar a medias.
+2. Consistency: solo se empieza aquello que se puede acabar.
+3. Isolation: una operacion no puede afectar a otras.
+4. Durability: los cambios persisten.
+<!-- Página 33 -->
+
 ## Arquitectura de aplicaciones de bases de datos

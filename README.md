@@ -22,7 +22,7 @@ Se puede promocionar por separado
 
 ## 📚️ Programa
 
-### **Introducción**
+### **Introducción** [[BasesDeDatos/base-de-datos/teórico/1-intro]] 
 + ✅️ ¿Qué es una base de datos?
 + ✅️ Aplicaciones de bases de datos
 + ✅️ Esquemas y ejemplares
@@ -39,13 +39,13 @@ Se puede promocionar por separado
 + ✅️ Sistemas gestores de bases de datos
 + ⬜️ Arquitectura
 + ✅️ Gestión del almacenamiento
-+ ⬜️ Procesamiento de consultas
-+ ⬜️ Transacciónes
-+ ⬜️ Planificaciones
-+ ⬜️ Gestión de transacciones
++ ✅️ Procesamiento de consultas
++ ✅️ Transacciónes
++ ✅️ Planificaciones
++ ✅️ Gestión de transacciones
 + ⬜️ Arquitectura de aplicaciones de bases de datos
 
-### **Diseño de Entidad-Relación**
+### **Diseño de Entidad-Relación** [[2-diseñoE-R]]
 + ⬜️ Diagramas de entidad-relación
 + ⬜️ Entidades, atributos y conjuntos de entidades.
 + ⬜️ Supercalves, claves candidatas y claves primarias de conjuntos de entidades
