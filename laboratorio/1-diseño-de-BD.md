@@ -1,51 +1,14 @@
-# Introducción:
-## Bases de datos y DBMS
-
-“Una **base de datos** es una colección de datos organizados relevantes a un 
-dominio que son administrados y consultados mediante un sistema de 
-administración de base de datos (DBMS).”
-
-“Un **Database Management System** (DBMS) es un sistema que permite la gestión
-y consulta de base de datos.”
-
-Gestión | Consulta
---- | ---
-	Definicion de esquema | responder preguntas sobre los datos
-creacion de datos | realizar análisis sobre los datos
-
-### Modelo de datos
-“Un **modelo de datos** es una colección de herramientas conceptuales para 
-describir los datos, las relaciones entre ellos, su semántica y las restricciones de 
-consistencia.”
-
-Define la estructura lógica de la base de datos.  
-Impacta en la forma en que los datos son almacenados y manipulados.   
-Existen diferentes modelos de datos:
--   **Modelo Relacional** (**SQL**)
--   **Modelos No relacionales** (**NoSQL**):
--   Modelo de Objetos  (Realm DB)
--   Modelo de Documentos (MongoDB)
--   Modelos de Grafos (Neo4J)
-
-### Bases de datos relacionales
-Las **bases de datos relacionales** (RDBMS) son una implementación del modelo relacional introducido en los 70s por [Edgar Codd](https://en.wikipedia.org/wiki/Edgar_F._Codd) en A Relational Model of Data for Large Shared Data Banks
-
-* La estructura básica es la **tabla** (relación).
-* La tabla define columnas (**atributos**) y tiene filas de datos (**tuplas**).
-* Se pueden **relacionar** una o más tablas.
-* Las columnas tienen un cierto **tipo de datos** (dominio)
-* Usan **SQL** como lenguaje para manipular y consultar datos.
-
-## Diseño de Bases de Datos
-### Características de una buena BD
+# Diseño de Bases de Datos
+## Características de una buena BD
 Una base de datos bien diseñada debe:
-* Eliminar la redundancia de datos
+* Eliminar la **redundancia** de datos
 	* Evitar inconsistencia
 	* No malgastar almacenamiento
-* Asegurar la integridad de los datos
-	* Usar claves primarias correctas: "clave primaria" identifica **unívocamente** una fila de una tabla. Usar 2 o 3 columas que identifican una fila.
+* Asegurar la **integridad** de los datos
+	* Usar claves primarias correctas: "clave primaria" identifica **unívocamente** una fila de una tabla.
+	Usar 2 o 3 columas que identifican una fila.
 	* Evitar inconsistencias
-* Facilitar la aplicación de las reglas de negocio
+* Facilitar la **aplicación** de las reglas de negocio
 
 Es un proceso iterativo. Se tiene que ir mejorando en cada iteración.
 
@@ -76,16 +39,15 @@ Especificar **claves primarias**: Usualemte son de tipo numérico y autoincremen
 * **Inmutable**
 * Con la menor cantidad de columnas posibles
 
-
 ## Definicion de Relaciones entre Tablas
 ### Relaciones entre tablas:
-
 #### Uno a muchos
 * No se pueden representar con una sola tabla
 * Existen una tabla madre (1) y una tabla hija (*)
 * En la table hija tenemos como **clave foránea** la clave primaria de la tabla padre
 
 ![](https://lh6.googleusercontent.com/lE3YJUViPKOPP3xk-f-89dG_6gNiQs2ePMxCgeYLudHlVNrVH7w6p-F7E75LCruT4_y-9b3DfPQceO5pSvdSzsObJjeiPgAMTE06l4ahNLsxUW70-7OEs668b-0hzcl0Q1F0d5dU2tcroD9C4tG11D4)
+
 #### Muchos a muchos
 -   Para soportar relaciones muchos-a-muchos necesitamos introducir una tercer 
 tabla: la tabla de asociación.
@@ -109,3 +71,6 @@ tabla: la tabla de asociación.
 
 -   **Tercera Forma Normal(3NF)**: 2NF + toda columna que no forma parte de la clave primaria depende solamente de la clave primaria.
 	-   Evitar columnas derivadas. Más datos para la misma info por  ej: edad y fecha de nacimiento
+
+
+- **Práctico**: [[1-diseño-de-BDR]]

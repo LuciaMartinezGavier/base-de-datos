@@ -1,4 +1,4 @@
-# Práctico I
+contrato# Práctico I
 ## Diseño de Bases de Datos Relacionales
 
 
@@ -55,3 +55,5 @@ review
 
 5.  Dada una pelicula X, calcular su "calificacion promedio" listo
 6. Listar las películas por dos o más directoras femeninas
+
+![Base de datos](Diagram-practico1.png)

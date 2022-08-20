@@ -28,14 +28,14 @@ Los parciales son en la computadora, individuales a "libro abierto".
 **Promoción**: ambos parciales con nota al menos 6 y promedio al menos 7 (80%)
 
 
-## Índice
-### Introducción
-[[BasesDeDatos/base-de-datos/laboratorio/intro]]
-🔸️ Base de datos y DBMS
-🔸️ Modelo de datos
-🔸️Base de datos relacionales
-🔸️Diseño de base de datos
-	    🔸️Análisis de requerimientos
-	    🔸️Creación de tablas
-		🔸️Relaciones entre tablas
-		🔸️Normalización
+## ☝️ Índice
+### Introducción [[1-diseño-de-BD]]
+- Contenidos:  
+	- Base de datos y DBMS  
+	- Modelo de datos  
+	- Base de datos relacionales  
+	- Diseño de base de datos  
+		- Análisis de requerimientos  
+		- Creación de tablas  
+		- Relaciones entre tablas  
+		- Normalización  
