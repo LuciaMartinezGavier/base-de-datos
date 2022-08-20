@@ -19,4 +19,4 @@ Si un atributo se repite para dos entidades entonces se debería eliminar en alg
 + **Usar los atributos de clave primaria de entidades relacionadas como atributos de relación**: Mejor usar los atributos de las entidades solo en las entidades y no sumarlas a la relación, que es redundante y poco comprensible
 + **Si con la relación binaria puedo capturar los datos de una relación de grado > 2 y puedo expresar más *restricciones de integridad* que con la relación de grado > 2**, entonces conviene usar la relación binaria.
 + **Si los objetos están relacionados con entidades de una entidad fuerte que no es de identificación**, entonces es necesario modelar dichos objetos como entidades débiles
-+ Uso de eentidad vs usos de relacion <!--TO DO: Completar-->
++ Uso de entidad vs usos de relacion <!--TO DO: Completar-->
