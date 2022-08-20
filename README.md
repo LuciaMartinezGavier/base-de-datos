@@ -21,8 +21,8 @@ Se puede promocionar por separado
 * Promocionar:
 
 ## 📚️ Programa
-
-### **Introducción** [[BasesDeDatos/base-de-datos/teórico/1-intro]] 
+Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
+### **Introducción** [[1-introBD]] 
 + ✅️ ¿Qué es una base de datos?
 + ✅️ Aplicaciones de bases de datos
 + ✅️ Esquemas y ejemplares
@@ -35,15 +35,15 @@ Se puede promocionar por separado
 + ✅️ Diseño de base de datos relacionales
 + ✅️ Diseño de entidad-relación
 + ✅️ Teoría de normalización
-+ ⬜️ Traducción de diseño de endidad-relación a tablaas
++ ✅️ Traducción de diseño de endidad-relación a tablas
 + ✅️ Sistemas gestores de bases de datos
-+ ⬜️ Arquitectura
++ ✅️ Arquitectura
 + ✅️ Gestión del almacenamiento
 + ✅️ Procesamiento de consultas
 + ✅️ Transacciónes
 + ✅️ Planificaciones
 + ✅️ Gestión de transacciones
-+ ⬜️ Arquitectura de aplicaciones de bases de datos
++ ✅️ Arquitectura de aplicaciones de bases de datos
 
 ### **Diseño de Entidad-Relación** [[2-diseñoE-R]]
 + ⬜️ Diagramas de entidad-relación
@@ -54,10 +54,10 @@ Se puede promocionar por separado
 + ⬜️ Correspondencia de cardinalidades
 + ⬜️ Restricciones de participación
 + ⬜️ Notación de intervalos
-+ ⬜️ Conjuntos dee entidades débiles
++ ⬜️ Conjuntos de entidades débiles
 + ⬜️ Especialización y generalización
 + ⬜️ Restricciones de diseño sobre las generalizaciones.
-+ ⬜️ Decisiones de diseñi al construir un diagrama de entidad-relación.
++ ⬜️ Decisiones de diseño al construir un diagrama de entidad-relación.
 + ⬜️ Estructura básica de las bases de datos relacionales
 + ⬜️ Esquema de una base de datos relacional
 + ⬜️ Claves primarias

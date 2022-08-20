@@ -1,6 +1,12 @@
 # **Introducción**
 
 ## ¿Qué es una base de datos?
+---
+“Una **base de datos** es una colección de datos organizados relevantes a un 
+dominio que son administrados y consultados mediante un sistema de 
+administración de base de datos (DBMS).”
+***
+
 Una base de datos es una colección de **datos relacionados** que tiene las
 siguientes propiedades implícitas:
 * Representa algún aspecto del mundo real (en ocasiones se denomina *minimundo* o
@@ -26,11 +32,20 @@ Telecomunicaciones, Finanzas, Ventas, Producción, Recursos Humanos...
 **Instancias** Contenido efectivo de la BD en un momento del tiempo.
 
 ## Modelos de los datos
-Es una colección de herramientas conceptuales para describir los datos, las
-relacioes, la semántica y las restricciones de consistencia.
+***
+“Un **modelo de datos** es una colección de herramientas conceptuales para 
+describir los datos, las relaciones entre ellos, su semántica y las restricciones de 
+consistencia.”
+***
 
-* Modelo entidad-relación
-* Modelo relacional
+Define la estructura lógica de la base de datos.  
+Impacta en la forma en que los datos son almacenados y manipulados.   
+Existen diferentes modelos de datos:
+-   **Modelo Relacional** (**SQL**)
+-   **Modelos No relacionales** (**NoSQL**):
+-   Modelo de Objetos  (Realm DB)
+-   Modelo de Documentos (MongoDB)
+-   Modelos de Grafos (Neo4J)
 
 ## Modelo relacional
 Se utiliza un grupo de tablas para representar los datos y las relaciones entre
@@ -46,14 +61,21 @@ contiene registros de un tipo particular. Cada tipo de registro define un númer
 fijo de campos, o atributos. Las columnas de la tabla corresponden a los
 atributos del tipo de registro.
 
+* La estructura básica es la **tabla** (relación).
+* La tabla define columnas (**atributos**) y tiene filas de datos (**tuplas**).
+* Se pueden **relacionar** una o más tablas.
+* Las columnas tienen un cierto **tipo de datos** (dominio)
+* Usan **SQL** como lenguaje para manipular y consultar datos.
+
 ## Modelos de datos no relacionales
-Una base de datos no relacional es aquella que no usa el esquema tabular de
+Una base de datos no relacional es aquella que **no usa el esquema tabular** de
 filas y columnas que se encuentra en la mayoría de los sistemas de base de datos
 más tradicionales.
 Ej: NoSQL
-Usan un modelo de almacenamiento que está optimizado para los requisitos
-específicos del tipo de datos que se almacena. Por ejemplo, los datos se pueden
-almacenar como pares clave/valor simple, como documentos JSON o como un grafo
+
+Usan un modelo de almacenamiento que está **optimizado para los requisitos
+específicos del tipo de datos que se almacena**. Por ejemplo, los datos se pueden
+almacenar como pares clave/valor simple, como documentos *JSON* o como un grafo
 que consta de bordes y vértices.
 
 ## Lenguajes consulta
@@ -108,21 +130,30 @@ pequeñas, que además de ser más simples y más estables, son más fáciles de
 mantener.
 
 ## Traducción de diseño de endidad-relación a tablas
-<!-- TO DO -->
+¿Cómo se puede reoresentar un esquema E-R mediante tablas?
 
 ## Sistemas gestores de bases de datos DBMS 
-DBMS: data base managment sytstem
+***
+“Un **Database Management System** (DBMS) es un sistema que permite la **gestión**
+y **consulta** de base de datos.”
+***
+**Gestión**: 
+-   Definición de esquema.
+-   Creación de datos.
+-   Creación de relaciones, actualización de datos, seguridad, etc.
 
-El **sistema gestor** de BD es/se encarga del:
-* Gestor de almacenamiento
-* Procesamiento de consultas
-* Gestor de transacciones
+**Consulta**:
+-   Responder preguntas sobre los datos.
+-   Realizar análisis con los datos.
 
+### Arquitectura de un sistema de bases de datos
+Los componentes funcionales de un sustema de base de dtos se pueden dividir a grandes reasogos en los componentes:
+* [Gestor de almacenamiento](#gestor-de-almacenamiento)
+* [Procesamiento de consultas](#procesamiento-de-consultas)
 
-## Arquitectura
-<!-- TO DO -->
-	
-## Gestión del almacenamiento
+* [Gestor de transacciones](#gestor-de-transacciones)
+
+## Gestor de Almacenamiento
 El *gestor de almacenamiento* es un módulo de programa que proporciona la interfaz entre los datos de bajo nivel en la vase de datos y los programas de aplicación y consultas emitidas al sistema.
 * Responsable de la interacción con el gestor de archivos.
 Interfaz para programas de aplicación y consultas: acceso al almacenamiento, organización en archivos de los datos, indexado. API
@@ -135,7 +166,7 @@ Interfaz para programas de aplicación y consultas: acceso al almacenamiento, or
 2. Optimizar: encontrar la manera más eficiente.
 3. Evaluar: obtener el resultado
 
-## Transacciónes
+## Transacciones
 Concepto muy usado en data mining
 Operaciones que se corresponden con una función lógica simple. Ejemplo: subir una nota a guaraní.
 
@@ -146,7 +177,7 @@ La solución es la **atomicidad**. Todas las operaciones de la transaccion son r
 Secuencias que indican el **orden** cronológico en el cual las instrucciones de transacciones concurrentes son ejecutadas.
 Se utilizan locks para bloquear áreas de la BD durante las escrituras.
 
-## Gestión de transacciones
+## Gestor de transacciones
 Las transacciones deben cumplir 4 propiedades ACID
 1. Atomicity: una operacion no puede quedar a medias.
 2. Consistency: solo se empieza aquello que se puede acabar.
@@ -155,3 +186,9 @@ Las transacciones deben cumplir 4 propiedades ACID
 <!-- Página 33 -->
 
 ## Arquitectura de aplicaciones de bases de datos
+![](https://imgur.com/EK0e82T.png)
+
+Usuarios de un sistema de da bases de datos se conectan a través de una red:
+De pueden diferenciar:
+* Máquinas **cliente**: trabajan usuarios remotos de la base de datos
+* Máquinas **servidor**: se ejecuta el sistema de bases de datos
