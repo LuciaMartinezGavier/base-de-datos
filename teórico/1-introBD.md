@@ -18,9 +18,9 @@ surtido aleatorio de datos).
 Se usan ampliamente. Permiten navegar, consultar y alterar las informaciones.
 
 ### Niveles de abstracción
-Nivel **fisico**: describe cómo se almacena un registro
+Nivel **físico**: describe cómo se almacena un registro
 Nivel **lógico**: describe los datos almacenados y sus relaciones
-Nivel **vista**: lo que ven los programad de aplicacion
+Nivel **vista**: lo que ven los programad de aplicación
 
 ## Aplicaciones de bases de datos
 Se utilizan para guardar información de diversos tipos en áreas como:
@@ -107,18 +107,12 @@ mediante composición. Definen, por tanto, un pequeño lenguaje de manipulación
 de datos.
 
 ## Diseño de base de datos relacionales
-Evitar la repetición de la información. Es mejor un esquema sin reduncdancia.
+Evitar la repetición de la información. Es mejor un esquema sin redundancia.
 Conviene siempre descomponer en esquemas más chicos.
 
 ## Diseño de entidad-relación
 Modelado conceptual. Un nivel de abstracción más alto que el modelo relacional.
-En esto se basa el diseño de la base de datos, compuesta por entidades y
-relaciones.
-
-**Entidad:** Objeto en organización distinguible de otros objetos. Descrito por
-medio de atributos, ej: objeto estudiante descrito por dni, legajo, ... .
-
-**Relación:** asociación entre entidades
+En esto se basa el diseño de la base de datos, compuesta por entidades, atributos y relaciones.
 
 ## Teoría de normalización
 Cómo diseñar buenos esquemas de bases de datos relacionales.
@@ -129,8 +123,8 @@ cual se transforman datos complejos a un conjunto de estructuras de datos más
 pequeñas, que además de ser más simples y más estables, son más fáciles de
 mantener.
 
-## Traducción de diseño de endidad-relación a tablas
-¿Cómo se puede reoresentar un esquema E-R mediante tablas?
+## Traducción de diseño de entidad-relación a tablas
+¿Cómo se puede representar un esquema E-R mediante tablas?
 
 ## Sistemas gestores de bases de datos DBMS 
 ***

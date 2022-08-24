@@ -12,7 +12,7 @@
 ### Regularización y promoción
 
 Se puede promocionar por separado  
-**Teorico/práctico**  
+**Teórico/práctico**  
 * Regularizar: al menos 4 en ambos parciales
 * Promocionar: notas de al menos 6 y promedio de 7 (no lineal)
 
@@ -35,34 +35,34 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
 + ✅️ Diseño de base de datos relacionales
 + ✅️ Diseño de entidad-relación
 + ✅️ Teoría de normalización
-+ ✅️ Traducción de diseño de endidad-relación a tablas
++ ✅️ Traducción de diseño de Entidad-relación a tablas
 + ✅️ Sistemas gestores de bases de datos
 + ✅️ Arquitectura
 + ✅️ Gestión del almacenamiento
 + ✅️ Procesamiento de consultas
-+ ✅️ Transacciónes
++ ✅️ Transacciones
 + ✅️ Planificaciones
 + ✅️ Gestión de transacciones
-+ ✅️ Arquitectura de aplicaciones de bases de datos
++ ✅️  Arquitectura de aplicaciones de bases de datos
 
 ### **Diseño de Entidad-Relación** [[2-diseñoE-R]]
-+ ⬜️ Diagramas de entidad-relación
-+ ⬜️ Entidades, atributos y conjuntos de entidades.
-+ ⬜️ Supercalves, claves candidatas y claves primarias de conjuntos de entidades
-+ ⬜️ Relaciones y conjuntos de relaciones
-+ ⬜️ Clasificación de Atributos
-+ ⬜️ Correspondencia de cardinalidades
-+ ⬜️ Restricciones de participación
++ ✅️ Diagramas de entidad-relación
++ ✅️ Entidades, atributos y conjuntos de entidades.
++ ✅️ Superclaves, claves candidatas y claves primarias de conjuntos de entidades
++ ✅️ Relaciones y conjuntos de relaciones
++ ✅️ Clasificación de Atributos
++ ✅️ Correspondencia de cardinalidades
++ ✅️ Restricciones de participación
 + ⬜️ Notación de intervalos
-+ ⬜️ Conjuntos de entidades débiles
++ ✅️ Conjuntos de entidades débiles
 + ⬜️ Especialización y generalización
 + ⬜️ Restricciones de diseño sobre las generalizaciones.
 + ⬜️ Decisiones de diseño al construir un diagrama de entidad-relación.
 + ⬜️ Estructura básica de las bases de datos relacionales
 + ⬜️ Esquema de una base de datos relacional
-+ ⬜️ Claves primarias
++ ✅️ Claves primarias
 + ⬜️ Claves foráneas
-+ ⬜️ Reducción de un esquema de entidad-relación a tablas
++ ✅️ Reducción de un esquema de entidad-relación a tablas
 
 ### **Álgebra de tablas**
 + ⬜️ Lenguajes de consulta
@@ -143,7 +143,7 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
 + ⬜️ Qué es MongoDB
 + ⬜️ Bases de datos, colecciones y documentos
 + ⬜️ Documentos BSON
-+ ⬜️ MongoDB Shell: Comandos
++ ⬜️ MongoDB Shell: Comandos 
 + ⬜️ Operaciones CRUD en MongoDB
 + ⬜️ Sintaxis típica de una consulta en MongoDB
 + ⬜️ Operaciones InsertOne e InsertMany
