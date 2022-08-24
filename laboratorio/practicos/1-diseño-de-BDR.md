@@ -2,7 +2,7 @@ contrato# Práctico I
 ## Diseño de Bases de Datos Relacionales
 
 
-1. Listar los datos de los clientes suscriptos al plan PREMIUM con una determinada fecha de subscripción.
+1. Listar los datos de los clientes suscritos al plan PREMIUM con una determinada fecha de suscripción.
 
 Cliente
 - Nombre
@@ -10,10 +10,10 @@ Cliente
 - Correo electrónico
 - Contraseña
  |
-↓ tiene una subscripcion 1...1
-- Subscripción
+↓ tiene una suscripción 1...1
+- Suscripción
 	- Plan: PREMIUM
-	- Fecha de subscripción
+	- Fecha de suscripción
 
 
 2. Listar los datos de las películas donde el actor 'X' fue protagonista
@@ -31,17 +31,17 @@ Relación de mucho a muchos
 
 Programa de television
 - Título
-- Descripcion
+- Descripción
 - genero
-↓ tiene temporadas (1..\*) ↓↓ tiene contratos (1..\*)  (puede ser el mismo que de peli) ↓↓↓ tiene reviews
+↓ tiene temporadas (1..\*) ↓↓ tiene contratos (1..\*)  (puede ser el mismo que de película) ↓↓↓ tiene reviews
 Temporadas
 - Numero de temporada
 - año de temporada
 ↓ tiene episodios
 Episodios
 - Título
-- descripcion
-- duracion
+- descripción
+- duración
 - fecha de lanzamiento
 
 4. listar los reviews hechos por un cliente X dentro de un rango de fechas
@@ -49,11 +49,11 @@ Episodios
 review
 - cliente
 - titulo
-- descripcion
+- descripción
 - fecha
-- calificacion
+- calificación
 
-5.  Dada una pelicula X, calcular su "calificacion promedio" listo
+5.  Dada una película X, calcular su "calificación promedio" listo
 6. Listar las películas por dos o más directoras femeninas
 
 ![Base de datos](Diagram-practico1.png)

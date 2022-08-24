@@ -2,17 +2,17 @@
 Estudio de las bases de datos desde un enfoque práctico.
 
 ## 👨‍🏫️ Profes
-* Ramiros Demasi
+* Ramiro Demasi
 * Sergio Canchi
 * Juan Cabral 
-* Cristian Cardellino
+* Christian Cardellino
 
 ## 📊️ Logística
-* Clases de 14hs a 18hs todos los viernes
+* Clases de 14 hs a 18 hs todos los viernes
 * Clases híbridas
 * Laboratorio 30
 * Se debe asistir a los parciales
-* 2hs teórico + 2hs de laboratorio
+* 2 hs teórico + 2 hs de laboratorio
 * Canales: *Zulip* y *Moodle*
 * Un práctico por clase
 
