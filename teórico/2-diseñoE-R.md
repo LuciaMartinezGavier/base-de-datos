@@ -204,3 +204,5 @@ Para cada conjunto de entidades de nivel más bajo se crea una tabla que incluya
 
 ### Representación tabular de la agregación
 Se transforman los conjuntos de relaciones y los conjuntos de entidades dentro de la entidad agregada.
+
+Práctico: [[BasesDeDatos/base-de-datos/teórico/practico1]]

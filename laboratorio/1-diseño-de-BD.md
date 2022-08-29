@@ -6,7 +6,7 @@ Una base de datos bien diseñada debe:
 	* No malgastar almacenamiento
 * Asegurar la **integridad** de los datos
 	* Usar claves primarias correctas: "clave primaria" identifica **unívocamente** una fila de una tabla.
-	Usar 2 o 3 columas que identifican una fila.
+	Usar 2 o 3 columnas que identifican una fila.
 	* Evitar inconsistencias
 * Facilitar la **aplicación** de las reglas de negocio
 
@@ -31,7 +31,7 @@ La base de datos se diseña junto con la aplicación
 ## Creacion de Tablas
 Tranformar en tablas los conceptos del dominio
 Definir tipos de datos
-Especificar **claves primarias**: Usualemte son de tipo numérico y autoincremental
+Especificar **claves primarias**: Usualmente son de tipo numérico y autoincremental
 
 #### Una clave primara debe ser:
 * **Única** y **No nula**
@@ -57,7 +57,7 @@ tabla: la tabla de asociación.
 
 #### Uno a Uno
 -   Se suelen utilizar para representar información complementaria
--   Utiles para partir una tabla “grande” en tablas más pequeñas.
+-   Útiles para partir una tabla “grande” en tablas más pequeñas.
 
 ![](https://lh3.googleusercontent.com/vRST09o83Edtk21pIws43C4O1Wgo9oPa8QG-XtdHMWChcEr76o9qasK9BM7sCkzHISzYa2wXVIatijvfdS3FQM6MHXlxEWsQUL7oWKHzC1I1ifBIGALe79cFqtPSTp5PHuAGHNiRJeqwNRoO9vDCil4)
 
@@ -67,7 +67,7 @@ tabla: la tabla de asociación.
 	-   Si usan columnas JSON [no son 1NF](https://www.thomascerqueus.fr/json-fields-relational-databases-postgresql/).
 
 -   **Segunda Forma Normal (2NF)**: 1NF + toda columna que no forma parte de la clave primaria depende de todas las columnas de la clave primaria.
-	-   Todos las columnas estan definidas por la clave primaria.
+	-   Todos las columnas están definidas por la clave primaria.
 
 -   **Tercera Forma Normal(3NF)**: 2NF + toda columna que no forma parte de la clave primaria depende solamente de la clave primaria.
 	-   Evitar columnas derivadas. Más datos para la misma info por  ej: edad y fecha de nacimiento
