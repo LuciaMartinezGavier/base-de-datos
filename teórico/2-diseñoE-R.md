@@ -1,5 +1,5 @@
-# Decisiones de diseño al hacer un diagrama de entidad-relación
-### Diagramas de entidad-relación
+# Diagramas de Entidad-Relación
+### Notación
 
 | Representación | Elemento |
 | -------------- | ---------|
@@ -14,8 +14,16 @@
 	| Rombo doble | Relación identificadora |
 | Atributos subrayados | Claves primarias |
 
-Notación de intervalos?
+![](https://imgur.com/Mz3gO1o.png)
+  
 ![](https://imgur.com/CFpLhVU.png)
+
+
+**Notación de intervalos**
+![Diagrama](https://lh4.googleusercontent.com/k1b2kpIM1QHO3AQl4jkySxnLei06ZmfPxTrrSPITSBQ-QeCW2hGk4ndyj6a31DS3eKZnrzHa6tHJHif-kG8Jx95Wjx2eyWieOBH8pyMxpmv3ZBA-R2HhPSSHFov6lK3BhMT5bqJurihAfc8cr3Bl)
+
+![Diagrama](https://lh3.googleusercontent.com/RoQtnPzqaqFxDJkMMCZ3d4TJ5xA-9gveJ9Xb-qh3xWr9AQMPfJ147oEmw6OnwnqbBUabeDYacR7m7500raenT_i2xAAwXglVtX7e-7-BSr0WO09t0NTBqsyAixJsBgpT2rRFd0SV0J3uvz0fkY6q)
+
 
 ## Entidades, Relaciones, Atributos y Claves
 ### Entidad
@@ -66,13 +74,16 @@ Las claves también ayudan a a identificar unívocamente a las relaciones
 
 **Superclave**: Es un conjunto de uno o más atributos que, tomados colectivamente, permiten identificar de forma única una entidad en el conjunto de entidades. Pueden contener atributos innecesarios.
 
-**Claves candidatas**: Son las superclaves cuyos subconjuntos no son superclave. Superclaves mínimas.
+**Claves candidatas**: Son las superclaves cuyos subconjuntos no son superclave. Superclaves mínimas. Puede ser que haya claves candidatas con diferentes cardinalidades.
+<!--Ejemplo: Casa: Número, Calle, Ciudad #3, o Casa: Código Postal #1-->
 
 **Clave primaria**: Es la clave candidata elegida para identificar las entidades dentro de un conjunto de entidades.
 
 También hay superclaves, claves candidatas y claves primaras para relaciones. Y se forman por las claves primarias de las entidades que la forman. La composición de la clave primaria para un conjunto de relaciones depende de al estructura de los atributos asociados al conjunto de relaciones R.
 
-**Clave foránea**:
+**Clave foránea**: Las tablas se relacionan con otras tablas mediante una relación de clave primaria o de clave foránea. Las relaciones de claves primarias y foráneas se utilizan en las bases de datos relacionales para definir relaciones de muchos a uno entre tablas.
+
+Una clave foránea es una columna o un conjunto de columnas en una tabla cuyos valores corresponden a los valores de la clave primaria de otra tabla. Para poder añadir una fila con un valor de clave foránea específico, debe existir una fila en la tabla relacionada con el mismo valor de clave primaria.
 
 ## Restricciones
 ### Correspondencia de cardinalidades
@@ -82,40 +93,99 @@ Expresa el número de entidades a las que otra entidad puede estar asociada vía
 + Varios a uno
 + Varios a varios
 
+### Restricciones de integridad
+Una restricción de integridad proporcionan un medio de asegurar que las modificaciones hechas a la base de datos por los usuarios autorizados no provoquen la pérdida de la consistencia de los datos.
+
 ### Restricciones de participación
 Dado un conjunto de entidades E en un conjunto de relaciones R se dice...
 + Participación **total**: Si cada entidad en E participa al menos en una relación en R
-+ Participación **parcial**: Si sólo algunas entidades en E participan en relaciones en R
++ Participación **parcial**: Si sólo algunas entidades en E participan en relaciones en R.
 
+## Especialización y generalización
+### Especialización
+<!--Parecido al concepto de herencia. -->
+Un conjunto de entidades puede incluir subgrupos de entidades que se diferencian de alguna forma de las otras entidades del conjunto.
 
-### Especialización y generalización
+El proceso de designación de subgrupos dentro de un conjunto de entidades se denomina **especialización**.
+
+Se puede aplicar repetidamente la especialización para refinar el esquema de diseño; y un conjunto de entidades se puede especializar por más de una característica distintiva.
+
+En términos de un diagrama E-R, la especialización se representa mediante un componente *triangular* etiquetado ES. La relación ES se puede llamar también relación **superclase-subclase**.
+
+**Ejemplo:**
+![](https://imgur.com/u4PHGED.png)
+
+### Generalización
+Consiste en varios conjuntos de entidades que se sintetizan en un conjunto de entidades de nivel más alto basado en características comunes.
+La **generalización** es una relación contenedora que existe entre el conjunto de entidades de *nivel más alto* y uno o más conjuntos de entidades de *nivel más bajo*.
+
+Los conjuntos de entidades de nivel más alto y nivel más bajo también se pueden llamar **superclase** y **subclase** respectivamente.
+
+Para propósitos prácticos,  la generalización es una *inversión de la especialización*.
+
+La generalización se usa para *resaltar las similitudes* entre los conjuntos de entidades de nivel más bajo y para *ocultar las diferencias*; y para *economizar* la representación para que los atributos compartidos no estén repetidos.
+
 #### Restricciones de diseño sobre las generalizaciones.
+Un tipo de restricción implica determinar qué entidades pueden ser miembros de un conjunto de entidades de nivel más bajo dado.
 
-### Decisiones de diseño al construir un diagrama de entidad-relación.
-#### Estructura básica de las bases de datos relacionales
-#### Esquema de una base de datos relacional
+##### Relaciones de miembros
++ **Definido por condición**: Se evalúa en función de si una entidad satisface o no una condición explícita o predicado.
+<!--+ **Definido por atributo**: Cuando todas las entidades de nivel más bajo se evalúan en función del mismo atributo.-->
++ **Definido por el usuario**: No están restringidos mediante una condición de miembro. La asignación al grupo se hace de forma individual por el usuario a cargo de la decisión.
 
-## Diseño de esquema de BD de calidad
+##### Relaciones de pertenencia a conjuntos
+Se define según si las entidades pueden pertenecer a más de un conjunto de entidades de nivel más bajo en una generalización simple.
+
++ **Disjunto**: Requiere que una entidad no pertenezca a más de un conjunto de entidades de nivel más bajo.
++ **Solapado**: La misma entidad puede pertenecer a más de un conjunto de entidades de nivel más bajo en una generalización simple.
+
+Le entidad de nivel más bajo solapada es el caso *predeterminado*; la restricción sobre el carácter disjunto se debe colocar explícitamente.
+Se puede identificar una restricción sobre el carácter disjunto en un diagrama E-R añadiendo la palabra *disjunto* en el símbolo del triángulo.
+4
+##### Restricción de completitud
+Especifica si un conjunto de entidades de nivel más alto debe pertenecer o no a al menos a uni de los conjuntos de entidades de nivel más bajo en una generalización/especialización.
+ +  **Generalización o especialización total**: Cada entidad de nivel más alto debe pertenecer a un conjunto de entidades de nivel más bajo. Se puede especificar en un diagrama E-R con una línea doble para conectar el rectángulo que representa el conjunto de entidades de nivel más alto con un triángulo.
+ 
+ + **Generalización o especialización parcial**: Algunas entidades de nivel más alto pueden no pertenecer a algún conjunto de entidades de nivel más bajo. (Predeterminada).
+
+
+## Decisiones de diseño al construir un diagrama de entidad-relación.
 (modelado Entidad-relación)
 + **La calidad de un esquema de BD es muy importante**
 
 Para hacer un diseño de un esquema de BD de calidad con modelado ER vamos a considerar:
 + **Errores** de modelado comunes
 + Consideración de **situaciones frecuentes** de decisión de diseño
-+ Comparación entre soluciones alternativas basándonos en redundancia de datos, comprensibilidad, completitud, facilidad de consultar la información.
+
+### Principios de diseño
+1. Evitar *redundancia de datos*
+2. *Comprensibilidad*: Interpretabilidad para humanos
+3. *Completitud* para describir el problema
+4. *Solución mínima* (evitar información innecesaria y suposiciones prematuras)
+5. *Eficiencia y eficacia* de consultas
+
+### Escenarios comunes de decisión
+1. **¿Atributo o relación?**
+	+ Si el atributo es la clave primaria de otra entidad, preferimos relación.
+	+ Es un error usar *la clave primaria de una entidad como atributos de otra entidad* en lugar de usar una relación: Usar una relación hace la conexión entre las dos entidades explícita, en lugar de implícita vía atributos de la clave primaria de una de las entidades.
+2. **¿Relación de grado mayor a 2 o relación binaria?**
+	+ Algunas relaciones que parecen no ser binarias podrían ser representadas mejor con varias relaciones binarias. Porque se pueden expresar más *restricciones de integridad*. \*
+3. **¿Entidad débil o atributo compuesto?**
+	+ Pensarlo como entidad débil si la complejidad puede ir creciendo.
+	+ Si los objetos están relacionados con entidades de una entidad fuerte que no es de *identificación*, entonces es necesario modelar dichos objetos como entidades débiles.
+4. **¿Entidad o atributo?**
+	+ Una entidad modela mejor una situación en la que se puede querer almacenar información extra. 
+	+ Si almacena un solo valor, conviene un atributo.
+	+ Las entidades son apropiadas cuando la generalidad puede ser de utilidad.
+5. **¿Entidad o relación?**
++ Si hay redundancia elegir la relación.
++ Cuando la relación es uno-varios o varios-uno y si hay atributos (no de clave primaria) en la entidad del lado uno, entonces los atributos de la entidad del lado uno no no son de clave primaria dan lugar a *redundancia de información* si se usa la alternativa entidad. Por  lo tanto, conviene relación.
++ Lo mismo pasa con la relación de varios-varios.
 
 ### Eliminación de atributos redundantes
 Atributos redundantes implican costos de almacenamiento extra y propagación de modificaciones innecesarias.
 
 Si un atributo se repite para dos entidades entonces se debería eliminar en alguna. Para representar la misma información se debe utilizar la menor cantidad de espacio.
-
-#### Errores comunes
-+ **Usar la clave primaria de una entidad como atributos de otra entidad en lugar de usar una relación**: Usar una relación  que vincula las dos entidades suele ser más adecuado para representar esta situación, porque hace la conexión entre las dos entidades explícita, en lugar de implícita vía atributos de la clave priaria de una de las entidades.
-+ **Usar los atributos de clave primaria de entidades relacionadas como atributos de relación**: Mejor usar los atributos de las entidades solo en las entidades y no sumarlas a la relación, que es redundante y poco comprensible
-+ **Si con la relación binaria puedo capturar los datos de una relación de grado > 2 y puedo expresar más *restricciones de integridad* que con la relación de grado > 2**, entonces conviene usar la relación binaria.
-+ **Si los objetos están relacionados con entidades de una entidad fuerte que no es de identificación**, entonces es necesario modelar dichos objetos como entidades débiles
-+ Uso de entidad vs usos de relación <!--TO DO: Completar-->
-
 
 ## Reducción de un esquema de entidad-relación a tablas
 ### Representación tabular de los conjuntos de **entidades fuertes**
@@ -205,4 +275,5 @@ Para cada conjunto de entidades de nivel más bajo se crea una tabla que incluya
 ### Representación tabular de la agregación
 Se transforman los conjuntos de relaciones y los conjuntos de entidades dentro de la entidad agregada.
 
+***
 Práctico: [[BasesDeDatos/base-de-datos/teórico/practico1]]

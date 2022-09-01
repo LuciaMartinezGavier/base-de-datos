@@ -53,15 +53,15 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
 + ✅️ Clasificación de Atributos
 + ✅️ Correspondencia de cardinalidades
 + ✅️ Restricciones de participación
-+ ⬜️ Notación de intervalos
++ ✅️ Notación de intervalos
 + ✅️ Conjuntos de entidades débiles
-+ ⬜️ Especialización y generalización
-+ ⬜️ Restricciones de diseño sobre las generalizaciones.
-+ ⬜️ Decisiones de diseño al construir un diagrama de entidad-relación.
++ ✅️ Especialización y generalización
++ ✅️ Restricciones de diseño sobre las generalizaciones.
++ ✅️ Decisiones de diseño al construir un diagrama de entidad-relación.
 + ⬜️ Estructura básica de las bases de datos relacionales
 + ⬜️ Esquema de una base de datos relacional
 + ✅️ Claves primarias
-+ ⬜️ Claves foráneas
++ ✅️ Claves foráneas
 + ✅️ Reducción de un esquema de entidad-relación a tablas
 
 ### **Álgebra de tablas**
@@ -95,7 +95,7 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
 + ⬜️ Modificación de la base de datos
 + ⬜️ Reunión de realciones
 
-### **Integridad y Seguridad**
+### **Integridad y Seguridad** [[Restricciones]] 
 + ⬜️ Integridad referencial
 + ⬜️ Integridad referencial en SQL
 + ⬜️ Aserciones
