@@ -104,11 +104,9 @@ SELECT Name
 FROM country
 WHERE IndepYear IS NULL;
 
--- Liste el nombre y el porcentaje de hablantes que tienen
+-- Liste el nombre de lenguaje y el porcentaje de hablantes que tienen
 -- todos los idiomas declarados oficiales.
 
-SELECT Name, Percentage, Language, IsOfficial
-FROM country, countrylanguage
-WHERE (country.Code=countrylanguage.CountryCode AND
-      countrylanguage.IsOfficial='T')
---????
+SELECT Percentage, Language, IsOfficial
+FROM countrylanguage
+WHERE (countrylanguage.IsOfficial='T');
