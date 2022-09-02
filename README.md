@@ -1,7 +1,16 @@
 # 🗃️ Bases de datos 🗃️
 
+## 👨‍🏫️ Profes
+**Laboratorio**
+* Ramiro Demasi
+* Sergio Canchi
+* Juan Cabral
+* Christian Cardellino
+**Teórico**
++ Laura Alonso Alemany
++ Juan Durán
+  
 ## 📆️ Generalidades
-
 ### **Parciales** 
 | 💻️ Teórico/práctico: | 💻️ Laboratorio: |
 | --- | --- |
@@ -9,16 +18,18 @@
 | 17/11 | 11/11 | 
 | 24/11 recuperatorio | 25/11 recuperatorio | 
 
-### Regularización y promoción
+\* Los parciales del laboratorio son en la computadora, individuales a "libro abierto".
 
-Se puede promocionar por separado  
+### Regularización y promoción
+Se puede promocionar por separado.
+
 **Teórico/práctico**  
 * Regularizar: al menos 4 en ambos parciales
 * Promocionar: notas de al menos 6 y promedio de 7 (no lineal)
 
 **Laboratorio**
-* Regularizar:
-* Promocionar:
+* Regularizar: Aprobar con 60% ambos parciales (4)
+* Promocionar: ambos parciales con nota al menos 6 y promedio al menos 7 (80%)
 
 ## 📚️ Programa
 Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
@@ -44,6 +55,7 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
 + ✅️ Planificaciones
 + ✅️ Gestión de transacciones
 + ✅️  Arquitectura de aplicaciones de bases de datos
+
 
 ### **Diseño de Entidad-Relación** [[2-diseñoE-R]]
 + ✅️ Diagramas de entidad-relación
@@ -72,7 +84,7 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
 + ⬜️ Listas y sus operaciones
 + ⬜️ Tablas y sus esquemas
 + ⬜️ Operadores: proyección generalizada, selección, producto cartesiano,
-     reuniion selectiva, reunión natural, renombramineto, concatenación,
+     reunión selectiva, reunión natural, renombramiento, concatenación,
      resta intersección, remoción de duplicados, agregación, agrupación,
      ordenamiento.
 + ⬜️ Definiciones locales
@@ -83,19 +95,19 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
 + ⬜️ Lenguaje de definición de datos: tipos de dominios en SQL, definición de
      esquemas en SQL
 + ⬜️ Restricciones de los dominios en SQL
-+ ⬜️ Cláusilas select, from y where
-+ ⬜️ La operación de renombreamiento
++ ⬜️ Cláusulas select, from y where
++ ⬜️ La operación de renombramiento
 + ⬜️ Variables tupla
 + ⬜️ Operaciones sobre Cadenas
 + ⬜️ Operaciones sobre conjuntos
 + ⬜️ Funciones de agregación
-+ ⬜️ Mandejo de valores nulos
++ ⬜️ Manejo de valores nulos
 + ⬜️ Subconsultas anidadas
-+ ⬜️ VIstas
++ ⬜️ Vistas
 + ⬜️ Modificación de la base de datos
-+ ⬜️ Reunión de realciones
++ ⬜️ Reunión de relaciones
 
-### **Integridad y Seguridad** [[Restricciones]] 
+### **Integridad y Seguridad** [[3-restricciones]] 
 + ⬜️ Integridad referencial
 + ⬜️ Integridad referencial en SQL
 + ⬜️ Aserciones
