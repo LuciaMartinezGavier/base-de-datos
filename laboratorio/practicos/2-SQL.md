@@ -258,7 +258,7 @@ EXCEPT [ALL]
 SELECT ...
 ```
 + Operan sobre tablas.
-+ Eliminan automaticamente los duplicados.
++ Eliminan automáticamente los duplicados.
 + Para retener duplicados hay que usar **ALL**. O sea, en la tabla final va a aparecer dos veces.
 
 ```sql
@@ -276,3 +276,4 @@ UNION
 ```
 (Se puede reemplazar UNION por INTERSECT o EXCEPT)
 Unión e intersección son el mismo concepto que en conjuntos. `A Except B` refiere a todos de la tabla a menos los que aparecen en la B.
+

@@ -19,7 +19,7 @@ Es un proceso iterativo. Se tiene que ir mejorando en cada iteración.
 4. [Normalización](#normalizacion)
 5. Repetir
 
-## Analisis de Requerimientos
+## Análisis de Requerimientos
 Se definen:
 * El objetivo de la base de datos.
 * Dominio de la aplicación
@@ -28,8 +28,8 @@ Se definen:
 
 La base de datos se diseña junto con la aplicación
 
-## Creacion de Tablas
-Tranformar en tablas los conceptos del dominio
+## Creación de Tablas
+Transformar en tablas los conceptos del dominio
 Definir tipos de datos
 Especificar **claves primarias**: Usualmente son de tipo numérico y autoincremental
 
