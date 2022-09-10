@@ -2,7 +2,7 @@
 ### Notación
 
 | Representación | Elemento |
-| -------------- | ---------|
+| -------------- | -------- |
 | Rectángulos | Conjuntos de entidades |
 | Elipses | Atributos |
 | Rombos | Relaciones |

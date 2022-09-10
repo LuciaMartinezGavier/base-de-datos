@@ -12,12 +12,12 @@
 	4.  Profesores: incluyendo número de legajo, nombre, departamento y cargo. 
 
 *Además la inscripción de los estudiantes en materias y las notas concedidas a estudiantes en cada materia en la que están inscriptos se deben modelar adecuadamente. Construir un diagrama E/R para la oficina de registro. Documentar todas las decisiones que se hagan acerca de restricciones de correspondencia.*
+
 | entidad | debil o fuerte | atributos | comentario |
 | --------| -------------- | --------- | ---------- |
 | materias | fuerte | número, titulo, programa | que se hace con las correlativas?? |
 | estudiantes | fuerte | n° matricula, carrera, nombre | 
 | oferta de materias | débil? | n° materia, cod oferta, horario, semestre, año, aula |
-
 
 Oferta de materias: entidad débil.
 Notas: entidad débil que depende de materia y estudiantes
