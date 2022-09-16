@@ -63,18 +63,55 @@ WHERE SurfaceArea < 1000 AND city.Population > 100000
 SELECT country.Name, max(city.Population) as Population
 FROM country INNER JOIN city ON country.Code = city.CountryCode
 GROUP BY country.Code;
--- TODO: falta usando escalares.
+-- TODO: falta usando consultas escalares.
 
 -- Listar aquellos países y sus lenguajes no oficiales cuyo porcentaje de
 -- hablantes sea mayor al promedio de hablantes de los lenguajes oficiales.
-
+WITH 
+    avg_percentage (value) AS (
+        SELECT avg(countrylanguage.Percentage)
+        FROM countrylanguage INNER JOIN country
+        ON country.code = countrylanguage.CountryCode
+        WHERE countrylanguage.IsOfficial = 'T'
+    )
+SELECT country.Name, countrylanguage.Language, countrylanguage.CountryCode
+FROM avg_percentage, country INNER JOIN countrylanguage
+ON country.Code = countrylanguage.CountryCode
+WHERE countrylanguage.Percentage > avg_percentage.value
+      AND countrylanguage.IsOfficial = 'F';
 
 
 -- Listar la cantidad de habitantes por continente ordenado en forma
 -- descendiente.
+SELECT sum(Population)
+FROM country
+GROUP BY country.Continent
+ORDER BY Population DESC
 
 -- Listar el promedio de esperanza de vida (LifeExpectancy) por continente
--- con una esperanza de vida entre 40 y 70 años.
+-- con una esperanza de vida entre 40 y 70 años. (es ambiguo el enunciado,
+-- planteo las dos opciones)
+
+SELECT country.continent, avg(country.LifeExpectancy)
+FROM country
+GROUP BY country.Continent
+HAVING LifeExpectancy > 40 AND LifeExpectancy < 70
+
+SELECT country.continent, avg(country.LifeExpectancy)
+FROM country
+WHERE country.LifeExpectancy > 40
+AND country.LifeExpectancy < 70
+GROUP BY country.Continent;
+
 
 -- Listar la cantidad máxima, mínima, promedio y suma de habitantes por
 -- continente
+SELECT max(cont_tmp.population),
+       min(cont_tmp.population),
+       avg(cont_tmp.population),
+       sum(cont_tmp.population)
+FROM (
+    SELECT sum(country.Population) AS 'Population', coutry.Continent
+    FROM country
+    GROUP BY Continent
+) continent_population

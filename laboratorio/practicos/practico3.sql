@@ -99,22 +99,28 @@ ON (country.Code = country_ef.CountryCode);
 
 -- Listar aquellos países que tengan hablantes del Inglés pero no del
 -- Español en su población.
-SELECT country.Name AS 'Country' FROM
-(
-    SELECT DISTINCT CountryCode FROM
-    (
-        SELECT CountryCode
-        FROM countrylanguage
-        WHERE (Language='English')
-    ) english_speakers
-    INNER JOIN
-    (
-        SELECT CountryCode
-        FROM countrylanguage
-        WHERE NOT Language = 'Spanish'
-    ) non_spanish_speakers
-    USING(CountryCode)
-) country_ef
-INNER JOIN country
-ON (country.Code = country_ef.CountryCode);
 
+(
+    SELECT country.Name
+    FROM country 
+    INNER JOIN countrylanguage
+    ON country.Code = countrylanguage.CountryCode
+    WHERE countrylanguage.Language = "English"
+)
+EXCEPT 
+(
+    SELECT country.Name
+    FROM country 
+    INNER JOIN countrylanguage
+    ON country.Code = countrylanguage.CountryCode
+    WHERE countrylanguage.Language = "Spanish"
+)
+
+
+
+SELECT tmp.Name, tmp.language
+FROM 
+    (SELECT co.name as "Name", cl.language as "language"
+    FROM country co INNER JOIN countrylanguage cl 
+    ON co.code = cl.countrycode and cl.language = "English") as tmp
+WHERE tmp.language != "French";
