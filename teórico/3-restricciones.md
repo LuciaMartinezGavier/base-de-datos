@@ -31,7 +31,7 @@ create trigger descubierto after update on cuenta
 referencing new row as nfila
 for each row
 when nfila.saldo < 0
-bebin atomic
+begin atomic
 	...
 ```
 

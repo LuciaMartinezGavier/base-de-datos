@@ -63,7 +63,7 @@ Define a una entidad. Cada entidad tiene un *valor* para cada uno de sus atribut
 #### Clasificación de Atributos
 + Atributos *simples* y *compuestos*: Los atributos simples no están divididos en subpartes. Los compuestos, en cambio, se pueden dividir en subpartes. Ayudan a agrupar los atributos relacionados, un atributo compuesto puede aparecer como una jerarquía.
 + Atributos *monovalorados* y *multivalorados*: Los atributos monovalorados tienen un solo valor para una entidad concreta. Un atributo que tiene un conjunto de valores para una entidad específica es un atributo multivalorado (se pueden especificar un límite superior e inferior).
-+ Atributos *derivados*: Se puede derivar de los valores de otros atributos o entidades relacionados.
++ Atributos *derivados*: Se puede derivar de los valores de otros atributos o entidades relacionados. El valor de un atributo derivado no se almacena, sino que se calcula cuando sea necesario.
 
 Un atributo toma un valor **nulo** cuando una entidad no tiene un valor para un atributo.
 
@@ -130,7 +130,7 @@ Un tipo de restricción implica determinar qué entidades pueden ser miembros de
 
 ##### Relaciones de miembros
 + **Definido por condición**: Se evalúa en función de si una entidad satisface o no una condición explícita o predicado.
-<!--+ **Definido por atributo**: Cuando todas las entidades de nivel más bajo se evalúan en función del mismo atributo.-->
++ **Definido por atributo**: Cuando todas las entidades de nivel más bajo se evalúan en función del mismo atributo.
 + **Definido por el usuario**: No están restringidos mediante una condición de miembro. La asignación al grupo se hace de forma individual por el usuario a cargo de la decisión.
 
 ##### Relaciones de pertenencia a conjuntos
@@ -141,9 +141,9 @@ Se define según si las entidades pueden pertenecer a más de un conjunto de ent
 
 Le entidad de nivel más bajo solapada es el caso *predeterminado*; la restricción sobre el carácter disjunto se debe colocar explícitamente.
 Se puede identificar una restricción sobre el carácter disjunto en un diagrama E-R añadiendo la palabra *disjunto* en el símbolo del triángulo.
-4
+
 ##### Restricción de completitud
-Especifica si un conjunto de entidades de nivel más alto debe pertenecer o no a al menos a uni de los conjuntos de entidades de nivel más bajo en una generalización/especialización.
+Especifica si un conjunto de entidades de nivel más alto debe pertenecer o no a al menos a uno de los conjuntos de entidades de nivel más bajo en una generalización/especialización.
  +  **Generalización o especialización total**: Cada entidad de nivel más alto debe pertenecer a un conjunto de entidades de nivel más bajo. Se puede especificar en un diagrama E-R con una línea doble para conectar el rectángulo que representa el conjunto de entidades de nivel más alto con un triángulo.
  
  + **Generalización o especialización parcial**: Algunas entidades de nivel más alto pueden no pertenecer a algún conjunto de entidades de nivel más bajo. (Predeterminada).
@@ -198,7 +198,7 @@ Entidades fuertes: Conjuntos de entidades que tienen una **clave primaria**.
 
 Alguno de los atributos descriptivo es una clave primaria.
 
-### Representación tabular de los conjuntos de **entidades débiles**
+### Representación tabular de los conjuntos de entidades débiles
 Conjunto de entidades que no tiene suficientes atributos para formar una clave primaria.
 Sea A el conjunto de entidades débiles con  los atributos a1, ..., aN.
 
@@ -210,7 +210,7 @@ formada por los atributos b1, ..., bN
 | Entidad1 |     | ... |     |     | ... |     |
 | Entidad2 |     | ... |     |     | ... |     |
 
-### Representación tabular de los conjuntos de **relaciones**
+### Representación tabular de los conjuntos de relaciones
 R: conjunto de relaciones
 a1, ..., aN: **claves primarias** de cada uno de los conjuntos de **entidades** que **participan en R**
 b1, ..., bN: **atributos descriptivos** de R (si los hay)
@@ -222,7 +222,7 @@ b1, ..., bN: **atributos descriptivos** de R (si los hay)
 
 Un conjunto de relaciones uniendo **un conjunto de entidades débiles** con el correspondiente **conjunto de entidades fuertes** no necesita estar presente en una representación tabular de un diagrama E-R.
 
-Para un conjunto de relaciones *AB*, que relacionan *A* y *B*, de varios a uno o de uno a uno se puede combinar las tablas  *AB* y *A* en una sola tabla (combinando las columnas de ambos). Y en el caso de uno a uno, tambien pueden juntarse *AB* y *B*.
+Para un conjunto de relaciones *AB*, que relacionan *A* y *B*, de varios a uno o de uno a uno se puede combinar las tablas  *AB* y *A* en una sola tabla (combinando las columnas de ambos). Y en el caso de uno a uno, también pueden juntarse *AB* y *B*.
 
 ### Atributos compuestos
 Los atributos compuestos se manejan creando un atributo separado para cada uno de los atributos componentes.
@@ -241,7 +241,7 @@ Dos métodos:
 
 **Crear una tabla para el conjunto de entidades de nivel más alto. Y por las de nivel más bajo crear una tabla que incluya una columna para la clave primaria y columnas para sus atributos.**
 
-Ejemplo: (Cuil es clave primaria de persona)
+Ejemplo: (cuil es clave primaria de persona)
 
 |Personas |  nombre | apellido |  Cuil |  ciudad-dirección  |  calle-dirección |
 | --------- | --- | --- | --- | --- | --- |

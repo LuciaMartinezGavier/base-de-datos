@@ -75,21 +75,20 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
 - [x] Claves foráneas
 - [x] Reducción de un esquema de entidad-relación a tablas
 
-### **Álgebra de tablas** [[BasesDeDatos/base-de-datos/algebra-de-tablas]] 
-
-- [ ] Lenguajes de consulta
-- [ ] Álgebra relacional
-- [ ] Limitaciones del álgebra relacional
-- [ ] Álgebra de tablas
-- [ ] Listas y sus operaciones
-- [ ] Tablas y sus esquemas
-- [ ] Operadores: proyección generalizada, selección, producto cartesiano,
+### **Álgebra de tablas** [[4-algebra-de-tablas]]
+- [x] Lenguajes de consulta
+- [x] Álgebra relacional
+- [x] Limitaciones del álgebra relacional
+- [x] Álgebra de tablas
+- [x] Listas y sus operaciones
+- [x] Tablas y sus esquemas
+- [x] Operadores: proyección generalizada, selección, producto cartesiano,
      reunión selectiva, reunión natural, renombramiento, concatenación,
      resta intersección, remoción de duplicados, agregación, agrupación,
      ordenamiento.
-- [ ] Definiciones locales
-- [ ] Consultas usando el álgebra de tablas
-- [ ] Propiedades de los operadores en el álgebra de tablas
+- [x] Definiciones locales
+- [x] Consultas usando el álgebra de tablas
+- [x] Propiedades de los operadores en el álgebra de tablas
 
 ### **SQL**
 - [ ] Lenguaje de definición de datos: tipos de dominios en SQL, definición de
