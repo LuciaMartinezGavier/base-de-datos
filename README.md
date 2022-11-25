@@ -2,7 +2,7 @@
 
 ## Profes
 
-### #Laboratorio
+### Laboratorio
 
 * Ramiro Demasi
 * Sergio Canchi
@@ -13,12 +13,10 @@
 
 * Laura Alonso Alemany
 * Juan Durán
-  
+
 ## Programa
 
-Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
-
-### [Introducción](./1-introBD.md)
+### [Introducción](teórico/1-introBD.md)
 
 * [x] ¿Qué es una base de datos?
 * [x] Aplicaciones de bases de datos
@@ -42,7 +40,7 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
 * [x] Gestión de transacciones
 * [x] Arquitectura de aplicaciones de bases de datos
 
-### [Diseño de Entidad-Relación](./2-diseñoE-R.md)
+### [Diseño de Entidad-Relación](teórico/2-diseñoE-R.md)
 
 * [x] Diagramas de entidad-relación
 
@@ -63,7 +61,7 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
 * [x] Claves foráneas
 * [x] Reducción de un esquema de entidad-relación a tablas
 
-### [Álgebra de tablas](./4-algebra-de-tablas.md)
+### [Álgebra de tablas](teórico/4-algebra-de-tablas.md)
 
 * [x] Lenguajes de consulta
 
@@ -80,7 +78,7 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
 * [x] Consultas usando el álgebra de tablas
 * [x] Propiedades de los operadores en el álgebra de tablas
 
-### [Integridad y Seguridad](3-restricciones.md)
+### [Integridad y Seguridad](teórico/3-restricciones.md)
 
 * [ ] Integridad referencial
 
@@ -93,7 +91,7 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
      autorizaciones, concesión de privilegios, papeles
 * [ ] Autorización en SQL: privilegios en SQL, papeles, el privilegio de conceder privilegios
 
-### [Almacenamiento de Datos](5-almacenamiento-y-estructura.md)
+### [Almacenamiento de Datos](teórico/5-almacenamiento-y-estructura.md)
 
 * [x] Organización de archivos
 * [x] Organización de registros en archivos
@@ -104,7 +102,7 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
 * [x] Índices árboles B+ y sus extensiones
 * [x] Definición de índices en SQL
 
-### [Procesamiento de consultas](7-procesamiento-de-consultas.md)
+### [Procesamiento de consultas](teórico/7-procesamiento-de-consultas.md)
 
 * [x] Pasos en el procesamiento de consultas
 * [x] Cómo medir el costo de una consulta
@@ -113,7 +111,7 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
 * [x] Materialización
 * [x] Encauzamiento
 
-### [Optimización de consultas](8-optimización-de-consultas.md)
+### [Optimización de consultas](teórico/8-optimización-de-consultas.md)
 
 * [x] Planes de evaluación
 * [x] Transformación de expresiones relacionales
@@ -147,7 +145,7 @@ Laboratorio: [[BasesDeDatos/base-de-datos/laboratorio/README]]
 * [x] Modelado de distintos tipos de relaciones en MongoDB
 * [x] Creación de índices en MongoDB
 
-### [Dependencias Funcionales](9-dependencias-funcionales.md)
+### [Dependencias Funcionales](teórico/9-dependencias-funcionales.md)
 
 * [x] Dependencias funcionales: conceptos básicos, cierre de un conjunto de
     dependencias funcionales, cierre de un conjunto de atributos, implicación
