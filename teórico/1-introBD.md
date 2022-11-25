@@ -112,7 +112,8 @@ Conviene siempre descomponer en esquemas más chicos.
 
 ## Diseño de entidad-relación
 Modelado conceptual. Un nivel de abstracción más alto que el modelo relacional.
-En esto se basa el diseño de la base de datos, compuesta por entidades, atributos y relaciones.
+En esto se basa el diseño de la base de datos, compuesta por entidades, atributos
+y relaciones.
 
 ## Teoría de normalización
 Cómo diseñar buenos esquemas de bases de datos relacionales.
@@ -141,16 +142,19 @@ y **consulta** de base de datos.”
 -   Realizar análisis con los datos.
 
 ### Arquitectura de un sistema de bases de datos
-Los componentes funcionales de un sustema de base de dtos se pueden dividir a grandes reasogos en los componentes:
+Los componentes funcionales de un sistema de base de datos se pueden dividir a
+grandes rasgos en los componentes:
 * [Gestor de almacenamiento](#gestor-de-almacenamiento)
 * [Procesamiento de consultas](#procesamiento-de-consultas)
-
 * [Gestor de transacciones](#gestor-de-transacciones)
 
 ## Gestor de Almacenamiento
-El *gestor de almacenamiento* es un módulo de programa que proporciona la interfaz entre los datos de bajo nivel en la vase de datos y los programas de aplicación y consultas emitidas al sistema.
+El *gestor de almacenamiento* es un módulo de programa que proporciona la
+interfaz entre los datos de bajo nivel en la vase de datos y los programas de
+aplicación y consultas emitidas al sistema.
 * Responsable de la interacción con el gestor de archivos.
-Interfaz para programas de aplicación y consultas: acceso al almacenamiento, organización en archivos de los datos, indexado. API
+Interfaz para programas de aplicación y consultas: acceso al almacenamiento,
+organización en archivos de los datos, indexado. API
 
 - acceso, modificación y retorno
 - eficiente mediante índices
@@ -162,20 +166,25 @@ Interfaz para programas de aplicación y consultas: acceso al almacenamiento, or
 
 ## Transacciones
 Concepto muy usado en data mining
-Operaciones que se corresponden con una función lógica simple. Ejemplo: subir una nota a guaraní.
+Operaciones que se corresponden con una función lógica simple. Ejemplo: subir
+una nota a guaraní.
 
-Algunas transacciones pueden producir fallas. Por ejemplo se saca plata de una cuenta pero no se pone en otra porque se corta la luz.
-La solución es la **atomicidad**. Todas las operaciones de la transaccion son reflejadas en la BD o ninguna lo es. Se garantiza que el sistema es **consistente**.
+Algunas transacciones pueden producir fallas. Por ejemplo se saca plata de una
+cuenta pero no se pone en otra porque se corta la luz.
+La solución es la **atomicidad**. Todas las operaciones de la transacción son 
+reflejadas en la BD o ninguna lo es. Se garantiza que el sistema es
+**consistente**.
 
 ## Planificaciones
-Secuencias que indican el **orden** cronológico en el cual las instrucciones de transacciones concurrentes son ejecutadas.
+Secuencias que indican el **orden** cronológico en el cual las instrucciones de
+transacciones concurrentes son ejecutadas.
 Se utilizan locks para bloquear áreas de la BD durante las escrituras.
 
 ## Gestor de transacciones
 Las transacciones deben cumplir 4 propiedades ACID
-1. Atomicity: una operacion no puede quedar a medias.
+1. Atomicity: una operación no puede quedar a medias.
 2. Consistency: solo se empieza aquello que se puede acabar.
-3. Isolation: una operacion no puede afectar a otras.
+3. Isolation: una operación no puede afectar a otras.
 4. Durability: los cambios persisten.
 <!-- Página 33 -->
 
